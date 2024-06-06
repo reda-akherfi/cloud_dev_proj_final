@@ -1,0 +1,8 @@
+# documentation for the project exam
+Author: AKHERFI Reda
+
+
+1. it is an app based on Azure's web app/app service that uses the Flask framework to interact with an API
+  and fetch a quote of the day
+2. it was built using both frontend and backend elements.
+3. it allows any user, provided they have access the the public domain name of the app, to get served the static content as well as the ability to refresh the page and get a new quote each time, i.e. the dynamic content
