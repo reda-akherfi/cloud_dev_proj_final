@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Quote Generator</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        #quote { font-size: 24px; margin-bottom: 20px; }
+        #sentiment { font-size: 18px; color: gray; }
+    </style>
+</head>
+<body>
+    <h1>Daily Quote Generator</h1>
+    <div id="quote">Fetching quote...</div>
+    <div id="sentiment"></div>
+
+    <script>
+        async function fetchQuote() {
+            const response = await fetch('/api/quote');
+            const data = await response.json();
+            document.getElementById('quote').innerText = `"${data.quote}"`;
+            document.getElementById('sentiment').innerText = `Sentiment: ${data.sentiment}`;
+        }
+        fetchQuote();
+    </script>
+</body>
+</html>
+
